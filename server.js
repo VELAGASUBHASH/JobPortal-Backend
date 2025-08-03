@@ -16,9 +16,9 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://rizeosjobportal.vercel.app',
-  credentials: true
+  origin: ['http://localhost:5173', 'https://rizeosjobportal.vercel.app']
 }));
+
 
 // Rate limiting
 const limiter = rateLimit({
